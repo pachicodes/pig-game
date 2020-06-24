@@ -19,16 +19,19 @@ function init () {
     document.querySelector('.player-1-panel').classList.remove('winner');
     document.querySelector('.player-0-panel').classList.remove('active');
     document.querySelector('.player-1-panel').classList.remove('active');
-    document.querySelector('.player-0-panel').classList.add('active');
-    
+    document.querySelector('.player-0-panel').classList.add('active');   
+
     playerOne = prompt("Enter Player's 1 name your name");
     playerTwo = prompt("Enter Player's 2 name your name");
 
     span0 = document.querySelector("#name-0");
     span1 = document.querySelector("#name-1");
-    span0.innerHTML = `${playerOne}`;
-    span1.innerHTML = `${playerTwo}`; 
 
+    if(playerOne && playerTwo) {
+        span0.innerHTML = playerOne;
+        span1.innerHTML = playerTwo;
+    }
+    
     gamePlaying = true;
 }
 
@@ -85,10 +88,3 @@ document.querySelector('.btn-hold').addEventListener('click', function() {
 });
 
 document.querySelector('.btn-new').addEventListener('click', init);
-
-
-
-
-
-
- 
