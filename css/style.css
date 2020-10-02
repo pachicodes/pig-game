@@ -133,31 +133,36 @@ button:hover {
     box-shadow: 0px 10px 60px rgba(0, 0, 0, 0.10);
 }
 
-.rules {
+.modal {
     position: fixed;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%) scale(0);
     z-index: 10;
     background-color: rgb(133, 133, 133);
     color: #f7f7f7;
     max-width: 50%;
     border-radius: 10px;
+    transition: 200ms ease-in-out;
 }
 
-.rules-header {
+.modal.active {
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.modal-header {
     padding: 20px 30px 0 30px;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.rules-header .title {
+.modal-header .title {
     font-size: 1,25rem;
     font-weight: bold;
 }
 
-.rules-header .close-button {
+.modal-header .close-button {
     cursor: pointer;
     border: none;
     outline: none;
@@ -169,7 +174,7 @@ button:hover {
     left: 90%;
 }
 
-.rules-body {
+.modal-body {
     padding:20px 30px;
 }
 
@@ -179,6 +184,15 @@ button:hover {
     left: 0;
     right: 0;
     bottom: 0;
+    background-color: rgba(255, 255, 255, 0);
+    
+    pointer-events: none;
+}
+
+#overlay.active {
+    pointer-events: all;
+    opacity: 1;
+    background-color: rgba(255, 255, 255, 0.7);
 }
 
 .winner { background-color: #f7f7f7; }

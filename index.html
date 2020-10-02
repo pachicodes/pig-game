@@ -31,13 +31,13 @@
             <button class="btn-new">New game</button>
             <button class="btn-roll">Roll dice</button>
             <button class="btn-hold">Hold</button>
-            <button class="btn-rules">Rules</button>
-            <div class="rules" id="rules">
-                <div class="rules-header">
+            <button data-modal-target="#modal" class="btn-rules">Rules</button>
+            <div class="modal" id="modal">
+                <div class="modal-header">
                     <div class="title">Rules</div>
-                    <button class="close-button">&times;</button>
+                    <button data-close-button class="close-button">&times;</button>
                 </div>
-                <div class="rules-body">
+                <div class="modal-body">
                     - The game has 2 players, playing in rounds
                     - In each turn, a player rolls a dice as many times as he whishes. Each result get added to his ROUND score<br>
                     - BUT, if the player rolls a 1, all his ROUND score gets lost. After that, it's the next player's turn<br>
