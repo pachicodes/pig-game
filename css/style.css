@@ -12,7 +12,7 @@
 }
 
 body {
-    background-image: linear-gradient(rgba(62, 20, 20, 0.4), rgba(62, 20, 20, 0.4)), url(back.png);
+    background-image: linear-gradient(rgba(62, 20, 20, 0.4), rgba(62, 20, 20, 0.4)), url(/img/back.png);
     background-size: cover;
     background-position: center;
     font-family: 'Josefin Sans', sans-serif;
@@ -123,7 +123,7 @@ button:hover {
 .btn-new { top: 45px;}
 .btn-roll { top: 403px;}
 .btn-hold { top: 467px;}
-
+.btn-rules { top: 530px;}
 .dice {
     position: absolute;
     left: 50%;

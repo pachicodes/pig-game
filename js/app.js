@@ -57,7 +57,7 @@ document.querySelector('.btn-roll').addEventListener('click', function() {
 
         var diceDOM = document.querySelector('.dice');
         diceDOM.style.display = 'block';
-        diceDOM.src = 'dice-' + dice + '.png';
+        diceDOM.src = '/img/dice-' + dice + '.png';
 
         if (dice !== 1) {
             roundScore += dice
@@ -86,5 +86,9 @@ document.querySelector('.btn-hold').addEventListener('click', function() {
         }
     }
 });
+
+document.querySelector('.btn-rules').addEventListener('click', function()) {
+    
+}
 
 document.querySelector('.btn-new').addEventListener('click', init);
