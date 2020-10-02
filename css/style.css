@@ -133,7 +133,7 @@ button:hover {
     box-shadow: 0px 10px 60px rgba(0, 0, 0, 0.10);
 }
 
-.modal {
+.rules {
     position: fixed;
     top: 50%;
     left: 50%;
@@ -146,23 +146,23 @@ button:hover {
     transition: 200ms ease-in-out;
 }
 
-.modal.active {
+.rules.active {
     transform: translate(-50%, -50%) scale(1);
 }
 
-.modal-header {
+.rules-header {
     padding: 20px 30px 0 30px;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.modal-header .title {
+.rules-header .title {
     font-size: 1,25rem;
     font-weight: bold;
 }
 
-.modal-header .close-button {
+.rules-header .close-button {
     cursor: pointer;
     border: none;
     outline: none;
@@ -174,7 +174,7 @@ button:hover {
     left: 90%;
 }
 
-.modal-body {
+.rules-body {
     padding:20px 30px;
 }
 
