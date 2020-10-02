@@ -12,7 +12,7 @@
 }
 
 body {
-    background-image: linear-gradient(rgba(62, 20, 20, 0.4), rgba(62, 20, 20, 0.4)), url(back.png);
+    background-image: linear-gradient(rgba(62, 20, 20, 0.4), rgba(62, 20, 20, 0.4)), url(/img/back.png);
     background-size: cover;
     background-position: center;
     font-family: 'Josefin Sans', sans-serif;
@@ -123,7 +123,7 @@ button:hover {
 .btn-new { top: 45px;}
 .btn-roll { top: 403px;}
 .btn-hold { top: 467px;}
-
+.btn-rules { top: 530px;}
 .dice {
     position: absolute;
     left: 50%;
@@ -131,6 +131,68 @@ button:hover {
     transform: translateX(-50%);
     height: 100px;
     box-shadow: 0px 10px 60px rgba(0, 0, 0, 0.10);
+}
+
+.rules {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    z-index: 10;
+    background-color: rgb(133, 133, 133);
+    color: #f7f7f7;
+    max-width: 50%;
+    border-radius: 10px;
+    transition: 200ms ease-in-out;
+}
+
+.rules.active {
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.rules-header {
+    padding: 20px 30px 0 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.rules-header .title {
+    font-size: 1,25rem;
+    font-weight: bold;
+}
+
+.rules-header .close-button {
+    cursor: pointer;
+    border: none;
+    outline: none;
+    background: none;
+    font-size: 1.25rem;
+    font-weight: bold;
+    width: 30px;
+    padding: 1px;
+    left: 90%;
+}
+
+.rules-body {
+    padding:20px 30px;
+}
+
+#overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(255, 255, 255, 0);
+    
+    pointer-events: none;
+}
+
+#overlay.active {
+    pointer-events: all;
+    opacity: 1;
+    background-color: rgba(255, 255, 255, 0.7);
 }
 
 .winner { background-color: #f7f7f7; }

@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <link href="https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap" rel="stylesheet">
-        <link type="text/css" rel="stylesheet" href="style.css">
+        <link type="text/css" rel="stylesheet" href="/css/style.css">
         
         <title>Pig Game</title>
     </head>
@@ -31,10 +31,24 @@
             <button class="btn-new">New game</button>
             <button class="btn-roll">Roll dice</button>
             <button class="btn-hold">Hold</button>
-            
-            <img src="dice-5.png" alt="Dice" class="dice">
+            <button data-modal-target="#rules" class="btn-rules">Rules</button>
+            <div class="rules" id="rules">
+                <div class="rules-header">
+                    <div class="title">Rules</div>
+                    <button data-close-button class="close-button">&times;</button>
+                </div>
+                <div class="rules-body">
+                    - The game has 2 players, playing in rounds
+                    - In each turn, a player rolls a dice as many times as he whishes. Each result get added to his ROUND score<br>
+                    - BUT, if the player rolls a 1, all his ROUND score gets lost. After that, it's the next player's turn<br>
+                    - The player can choose to 'Hold', which means that his ROUND score gets added to his GLOBAL score. After that, it's the next player's turn<br>
+                    - The first player to reach 100 points on GLOBAL score wins the game<br>
+                </div>
+            </div>
+            <div id="overlay"></div>
+            <img src="/img/dice-5.png" alt="Dice" class="dice">
         </div>
         
-        <script src="app.js"></script>
+        <script src="js/app.js"></script>
     </body>
 </html>
