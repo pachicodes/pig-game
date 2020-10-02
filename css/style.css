@@ -133,5 +133,53 @@ button:hover {
     box-shadow: 0px 10px 60px rgba(0, 0, 0, 0.10);
 }
 
+.rules {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+    background-color: rgb(133, 133, 133);
+    color: #f7f7f7;
+    max-width: 50%;
+    border-radius: 10px;
+}
+
+.rules-header {
+    padding: 20px 30px 0 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.rules-header .title {
+    font-size: 1,25rem;
+    font-weight: bold;
+}
+
+.rules-header .close-button {
+    cursor: pointer;
+    border: none;
+    outline: none;
+    background: none;
+    font-size: 1.25rem;
+    font-weight: bold;
+    width: 30px;
+    padding: 1px;
+    left: 90%;
+}
+
+.rules-body {
+    padding:20px 30px;
+}
+
+#overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
 .winner { background-color: #f7f7f7; }
 .winner .player-name { font-weight: 300; color: #FFC0CB; }
